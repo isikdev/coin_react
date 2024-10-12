@@ -1,0 +1,97 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.boostMain {
+  &__activateBox {
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(153, 153, 153, 0.05) 100%);
+    border-radius: 15px;
+    margin: 0 18px 35px;
+    padding: 0px 22px 35px;
+  }
+
+  &__logoAnim {
+    position: absolute;
+    width: 90px !important;
+    height: 90px !important;
+    top: 7%;
+    right: 1%;
+  }
+
+ &__marqueeText {
+    background: radial-gradient(circle at center, #40e0d0, #4f8781);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    transition: all 0.8s ease-out;
+  }
+
+  &__counter {
+    min-width: 155px;
+    @include flexCol(space-between)
+  }
+
+  &__activateDesk {
+    @include flexCol(flex-start);
+    gap: 16px;
+    padding-top: 20px;
+
+    &_anim {
+      width: 70px;
+    }
+  }
+
+  &__textBlock {
+    @include flexCol(center, flex-start);
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__title {
+    @include setFont(22px, 500);
+    font-family: $font-fam-exo2;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  &__bonus {
+    @include flexCol();
+    gap: 5px;
+  }
+
+  &__bonusText {
+    @include setFont(14px, 400);
+    font-family: $font-fam-rubik;
+  }
+
+  &__activationText {
+    padding-right: 4px;
+    text-align: left;
+    @include setFont(14px, 400);
+    font-family: $font-fam-rubik;
+    transition: all 0.8s ease-out;
+    opacity: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &_hidden {
+      transition: all 0.8s ease-out;
+      opacity: 0;
+    }
+  }
+
+  &__AAXAText {
+    @include setFont(14px, 400);
+    cursor: pointer;
+  }
+
+  &__logoIcon {
+    width: 17px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.slide {
+  padding-top: 10px;
+}
+
+.carouselResponsive {
+  @include flexCol();
+  flex-direction: column;
+  animation: fadeInAnimation 1s ease forwards;
+  margin-top: 46px;
+
+  &__avatar {
+    max-width: 136px;
+    height: 136px;
+    border-radius: 15px;
+  }
+
+  &__userName {
+    @include setFont(30px, 700);
+    font-family: $font-fam-exo2;
+    margin: 20px 0 10px;
+  }
+
+  &__status {
+    @include flexCol();
+    gap: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__desk {
+    max-width: 450px;
+    width: 100%;
+    @include flexCol(flex-start);
+    flex-direction: column;
+    gap: 15px;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.0125) 100%);
+    border-radius: 20px;
+    margin: 25px auto 0;
+    padding: 15px 17px;
+
+    @include smScreenMedia  {
+      max-width: 350px;
+    }
+
+    @include xsmScreenMedia  {
+      max-width: 300px;
+    }
+  }
+
+  &__account {
+    @include flexCol();
+    gap: 5px;
+  }
+  &__logoIcon {
+    width: 20px !important;
+    height: 22px !important;
+  }
+
+  &__leagueAnim {
+    width: 27px;;
+  }
+
+  &__logoAnim {
+    width: 20px !important;
+    height: 22px !important;
+  }
+
+  &__blueBtn {
+    width: 100%;
+    @include setFont(16px, 700);
+    font-family: $font-fam-exo2;
+    background: linear-gradient(90deg, #024C98 0%, #2399F8 100%);
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 19px;
+    padding: 13px;
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+      background: linear-gradient(90deg, #2399F8 0%, #024C98 100%);
+    }
+  }
+
+  &__navBtnDesk {
+    @include flexCol();
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(153, 153, 153, 0.05) 100%);
+    border-radius: 10px;
+
+    &_btn {
+      width: 100%;
+      @include setFont(16px, 700);
+      font-family: $font-fam-exo2;
+      padding: 13px;
+      line-height: 19px;
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.09) 0%, rgba(153, 153, 153, 0.09) 100%);
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

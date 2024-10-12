@@ -1,0 +1,53 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.usersTabsUserData {
+  &__userInfoBlock {
+    @include flexCol(flex-start, center);
+    padding: 0 13px 16px;
+  }
+
+  &__medalDigit {
+    min-width: 55px;
+    text-align: center;
+    @include setFont(20px, 500);
+  }
+
+  &__аvatarContainer {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  &__avatar {
+    max-width: 65px;
+    max-height:65px;
+    cursor: pointer;
+    margin-left:  6%;
+    margin-top: -6%;
+  }
+
+  &__userInfo{
+    @include flexCol(center, flex-start);
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__userName {
+    @include setFont(18px, 700);
+    cursor: pointer;
+  }
+
+  &__userReward {
+    @include flexCol();
+    gap: 5px;
+
+    &_imgCoin {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &__userAccount {
+    @include setFont(16px, 500, rgba(205, 205, 205, 1));
+  }
+}

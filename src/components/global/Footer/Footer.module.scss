@@ -1,0 +1,12 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.footer {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  z-index: 5;
+  max-width: 728px;
+  transition: $transition;
+}

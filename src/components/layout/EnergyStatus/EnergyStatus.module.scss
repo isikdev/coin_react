@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.energyStatus {
+  @include flexCol(flex-start);
+    gap: 8px;
+    margin: 18px 0 5px;
+
+  &__countBox {
+    @include flexCol(flex-start);
+    gap: 8px;
+    width: 127px;
+    @include setFont(16px, 700);
+  }
+
+  &__statusBox {
+    @include flexCol(flex-start);
+     width: 100%;
+     height: 36px;
+     background: rgba(255, 255, 255, 0.15);
+     border-radius: 20px;
+     padding: 0 2px;
+   }
+
+  &__energyAnim {
+    width: 50px !important;
+  }
+  &__energyDigit {
+    transition: all 19.5s easy-out;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &__statusPointer {
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(90deg, #2495FE 0%, #FFFFFF 100%);
+    border-radius: 20px;
+    transition: 1.5s all;
+    padding-top: 6px;
+    padding-left: 10px;
+  }
+}

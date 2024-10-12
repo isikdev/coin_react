@@ -1,0 +1,128 @@
+@import '../../../styles/mixins';
+@import '../../../styles/vars';
+
+.homeMain {
+  @include flexCol(center, center);
+  margin: 38px 18px 20px;
+  webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  &__contentBlock {
+    @include flexCol(center, center);
+    flex-direction: column;
+  }
+
+  &__accountBox {
+    @include flexCol(center, center);
+    margin-bottom: 25px;
+    gap: 5px;
+
+    svg {
+      width: 45px !important;
+      height: 45px !important;
+    }
+  }
+
+  &__account {
+    min-width: 55px;
+    @include setFont(30px, 700);
+    font-family: $font-fam-exo2;
+    margin-top: -6px;
+  }
+
+  &__place {
+    font-size: 12px;
+    font-family: $font-fam-rubik;
+  }
+
+  &__status {
+    @include flexCol();
+    gap: 3px;
+    @include setFont(12px, 500);
+    color: #7DA2CC;
+    font-family: $font-fam-rubik;
+    text-transform: uppercase;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  &__leagueAnim {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  &__leagueName {
+    margin: 2px 0 0 4px;
+  }
+
+  &__slideBtn {
+    cursor: pointer;
+  }
+
+  &__iconNext {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    stroke: $color-white;
+
+    &:hover {
+      stroke: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__logoBig {
+    @include flexCol(center, center);
+    position: relative;
+    margin-top: 12%;
+
+    svg {
+      width: 220px !important;
+      height: 220px !important;
+      padding: 20px;
+
+      &:hover, &:focus {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__counter {
+    cursor: default;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    color: $color-white;
+    z-index: 5;
+    font-size: 18px;
+    animation: count 1s linear;
+    opacity: 0;
+
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__counter::after {
+    content: '+1';
+    opacity: 1;
+  }
+}
+
+@keyframes count {
+  0% {
+    top: 50%;
+    right: 50%;
+    opacity: 0;
+  }
+  50% {
+    top: 0%;
+    right: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: -25%;
+    right: -25%;
+    opacity: 0;
+  }
+}

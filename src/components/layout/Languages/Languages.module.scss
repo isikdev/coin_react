@@ -1,0 +1,53 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.languagesSmall {
+  position: absolute;
+  top: 0;
+  right: 2px;
+}
+.languages {
+  position: absolute;
+  top: 30px;
+  right: 0;
+
+  &__langSwitcher {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    color: $color-white;
+    background: transparent;
+    padding-right: 18px;
+
+    &:focus {
+      background-color: transparent;
+      cursor: pointer
+    }
+
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 39px;
+      background: transparent url('../../../assets/images/arrow.svg') no-repeat right center / 7px auto;
+      @include setFont(14px, 500);
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    option {
+      color: $color-black;
+      cursor: pointer;
+    }
+  }
+
+  &__customSelect:focus {
+    outline: none;
+  }
+}

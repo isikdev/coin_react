@@ -1,0 +1,72 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.leaguePageSlider {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  @include flexCol();
+  flex-direction: column;
+  position: relative;
+  padding: 50px 18px 10px;
+
+  .slideIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 35%;
+    right: 6%;
+    stroke: $color-white;
+    &:hover  {
+      stroke: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__imgGoblet {
+    width: 150px;
+    transition: $transition;
+  }
+
+  &__leagueAnim {
+    height: 170px;
+  }
+
+  &__slideBtn {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__iconPrevious {
+    @extend .slideIcon;
+    left: 6%;
+  }
+
+  &__iconNext {
+    @extend .slideIcon;
+    right: 6%;
+  }
+
+  &__slidIconHidden {
+    display: none;
+  }
+
+  &__leagueType {
+    @include setFont(22px, 700);
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+  }
+
+  &__size {
+    @include setFont(16px, 500);
+    color: rgba(205, 205, 205, 1);
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

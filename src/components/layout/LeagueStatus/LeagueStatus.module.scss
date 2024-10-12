@@ -1,0 +1,158 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.leagueStatus {
+  max-width: 600px;
+  width: 100%;
+
+  &__statusBox {
+    @include flexCol(flex-start);
+    height: 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 0 2px;
+  }
+
+  &__statusPointer {
+    height: 16px;
+    border-radius: 20px;
+  }
+}
+
+//Slider colors
+
+.statusBoxElectro {
+  background: linear-gradient(to right, #1818ea, #141499, #04042b);
+}
+
+.statusPointerElectro {
+  width: 7%;
+  background: linear-gradient(90deg, #1818ea 0%, #FFFFFF 100%);
+}
+
+.statusBoxSilver {
+  background: linear-gradient(to right, #43575d, #83a2b8, #4c656e);
+}
+
+.statusPointerSilver {
+  width: 14%;
+  background: linear-gradient(90deg, #A4B8DE 0%, #FFFFFF 100%);
+}
+
+.statusBoxPlatinum {
+  background: linear-gradient(to right, #43575d, #305367, #203842);
+}
+
+.statusPointerPlatinum {
+  width: 21%;
+  background: linear-gradient(90deg, #2e4b5b 0%, #FFFFFF 100%);
+}
+
+.statusBoxGolden {
+  background: linear-gradient(to right, #545720, #aaa31a, #5b5e1f);
+}
+
+.statusPointerGolden {
+  width: 28%;
+  background: linear-gradient(90deg, #EAB613 0%, #FFFFFF 100%);
+}
+/*
+.statusBoxDiamond {
+  background: linear-gradient(to right, #243657, #3a63ad, #1a3549);
+}
+
+.statusPointerDiamond {
+  width: 35%;
+  background: linear-gradient(90deg, #3964ae 0%, #FFFFFF 100%);
+}
+*/
+
+.statusBoxQuantum {
+  background: linear-gradient(to right, #eecc40, #c2a115, #443703);
+}
+
+.statusPointerQuantum {
+  width: 35%;
+  background: linear-gradient(90deg, #e3bb11 0%, #FFFFFF 100%);
+}
+
+.statusBoxArt {
+  background: linear-gradient(to right, #e898ba, #e38cb1, #a33d4c);
+}
+
+.statusPointerArt {
+  width: 42%;
+  background: linear-gradient(90deg, #cb6f7b 0%, #FFFFFF 100%);
+}
+
+.statusBoxArbitration {
+  background: linear-gradient(to right, #ecaeb6, #bc616d, #410d14);
+}
+
+.statusPointerArbitration {
+  width: 49%;
+  background: linear-gradient(90deg, #ecaeb6 0%, #FFFFFF 100%);
+}
+
+.statusBoxMainers {
+  background: linear-gradient(to right, #f6a1f5, #d61dd6, #800080);
+}
+
+.statusPointerMainers {
+  width: 56%;
+  background: linear-gradient(90deg, #f6a1f5 0%, #FFFFFF 100%);
+}
+
+.statusBoxSecurity {
+  background: linear-gradient(to right, #40e0d0, #45aca4, #206761);
+}
+
+.statusPointerSecurity {
+  width: 63%;
+  background: linear-gradient(90deg, #40e0d0 0%, #FFFFFF 100%);
+}
+
+.statusBoxBank {
+  background: linear-gradient(to right, #cacac5, #9f9b9b, #343333);
+}
+
+.statusPointerBank {
+  width: 70%;
+  background: linear-gradient(90deg, #cacac5 0%, #FFFFFF 100%);
+}
+
+.statusBoxCity {
+  background: linear-gradient(to right, #885987, #6b6767, #171717);
+}
+
+.statusPointerCity {
+  width: 77%;
+  background: linear-gradient(90deg, #885987 0%, #FFFFFF 100%);
+}
+
+.statusBoxTeacher {
+  background: linear-gradient(to right, #f54063, #a82841, #360710);
+}
+
+.statusPointerTeacher {
+  width: 84%;
+  background: linear-gradient(90deg, #f54063 0%, #FFFFFF 100%);
+}
+
+.statusBoxControl {
+  background: linear-gradient(to right, #f55d44, #b54736, #471a13);
+}
+
+.statusPointerControl {
+  width: 91%;
+  background: linear-gradient(90deg, #f55d44 0%, #FFFFFF 100%);
+}
+
+.statusBoxActual {
+  background: linear-gradient(to right, #907750, #967b4f, #605538);
+}
+
+.statusPointerActual {
+  width: 100%;
+  background: linear-gradient(90deg, #907750 0%, #FFFFFF 100%);
+}

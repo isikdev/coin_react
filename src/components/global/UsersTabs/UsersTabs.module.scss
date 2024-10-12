@@ -1,0 +1,128 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.usersTabs {
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__tabs {
+   // height: 200px;
+   // overflow-y: auto;
+    border-radius: 20px;
+    margin: 10px 18px;
+    padding: 13px 5px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.8) transparent; /* For Firefox */
+  }
+  &__tabs::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &__tabs::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &__tabs::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
+
+  &__tabs::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  &__tabsTop {
+    margin-top: -25px;
+  }
+
+  &__tabBtn {
+    @include flexCol();
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  &__btn {
+    flex: 1;
+    padding-bottom: 12px;
+    cursor: pointer;
+    @include setFont(16px, 500, rgba(255, 255, 255, 0.8));
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: color 1.5s ease, border-bottom 1.5s ease;
+
+    &_active {
+      @include setFont(16px, 500);
+      cursor: default;
+      border-bottom-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+//Background-color
+
+.blueBox {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.0125) 100%);
+}
+
+.electicBlueBox {
+  background: radial-gradient(circle at bottom right, #1818ea, #04042b );
+}
+
+.silverBox {
+  background: radial-gradient(circle at bottom right, #5f7d96, #182121 );
+}
+
+.goldenBox {
+  background: radial-gradient(circle at bottom right, #af9c0b, #242712);
+}
+
+.platinumBox {
+  background: radial-gradient(circle at bottom right, #4d7ea0, #1d2828);
+}
+
+.diamondBox {
+  background: radial-gradient(circle at bottom right, #4365ba, #181d26);
+}
+
+.quantumBox {
+  background: radial-gradient(circle at bottom right, #f8ca0a, #000);
+}
+
+.artBox {
+   background: radial-gradient(circle at bottom right, #f3b7d0, #a33d4c);
+}
+
+.arbitrationBox {
+  background: radial-gradient(circle at bottom right, #ecaeb6, #410d14);
+}
+
+.mainersBox {
+  background: radial-gradient(circle at bottom right, #f6a1f5, #800080);
+}
+
+.securityBox {
+  background: radial-gradient(circle at bottom right, #40e0d0, #206761);
+}
+
+.bankBox {
+  background: radial-gradient(circle at bottom right, #cacac5, #343333);
+}
+
+.cityBox {
+  background: radial-gradient(circle at bottom right, #885987, #171717);
+}
+
+.teacherBox {
+  background: radial-gradient(circle at bottom right, #f54063, #360710);
+}
+
+.controlBox {
+  background: radial-gradient(circle at bottom right, #f55d44, #471a13);
+}
+
+.actualBox {
+  background: radial-gradient(circle at bottom right, #906c43, #23251c);
+}
+
+

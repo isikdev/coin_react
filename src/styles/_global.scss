@@ -1,0 +1,170 @@
+@import "vars";
+@import "mixins";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*:not(i) {
+  font-family: $font-fam-inter;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus, &:active{
+    user-select: none;
+    -webkit-user-select: none;
+    tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+body {
+  color: $color-white;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 768px;
+  width: 100%;
+  min-height: 100vh;
+
+  &::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    max-width: 728px;
+    backdrop-filter: blur(8px);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 86px;
+  }
+
+  &.boostContainer::after {
+    height: 136px;
+  }
+}
+
+.main {
+  padding-bottom: 90px;
+}
+
+.fixedHeader {
+  background: #101829;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 1px 1px #101829;
+}
+
+.fixedHeaderBig {
+  padding: 58px 18px 18px;
+}
+
+.fixedHeaderSmall {
+  padding: 46px 18px 18px;
+}
+
+.blueLightBlue {
+  background: radial-gradient(142.44% 53.23% at 51.65% 79.82%, #509CE7 0%, #101829 100%);
+}
+
+.greenBlue {
+  background: radial-gradient(130.51% 48.77% at 51.65% 4.69%, #63CCB0 0%, #101829 100%);
+}
+
+.blueAzure {
+  background: radial-gradient(142.44% 53.23% at 51.65% 75.82%, #7DA2CC 0%, #101829 74%);
+}
+
+.bronze {
+  background: radial-gradient(circle at center, #906c43, #23251c);
+}
+
+.electrcBlue {
+  background: radial-gradient(circle at center, #1818ea, #04042b);
+}
+
+.silver {
+  background: radial-gradient(circle at center, #5f7d96, #182121);
+}
+
+.golden {
+  background: radial-gradient(circle at center, #af9c0b, #242712);
+}
+
+.platinum {
+  background: radial-gradient(circle at center, #4d7ea0, #1d2828);
+}
+
+.diamond {
+  background: radial-gradient(circle at center, #4365ba, #181d26);
+}
+
+.goldBlack {
+  background: radial-gradient(circle at center, #f8ca0a, #000);
+}
+
+.pink {
+  background: radial-gradient(circle at center, #f3b7d0, #a33d4c);
+}
+
+.brown {
+  background: radial-gradient(circle at center,#ecaeb6,#410d14);
+}
+
+.purple {
+  background: radial-gradient(circle at center, #f6a1f5, #800080);
+}
+
+.turquoise {
+  background: radial-gradient(circle at center, #40e0d0, #206761);
+}
+
+.platinumLight {
+  background: radial-gradient(circle at center, #cacac5, #343333);
+}
+
+.black {
+  background: radial-gradient(circle at center, #885987, #171717);
+}
+
+.crimson {
+  background: radial-gradient(circle at center, #f54063, #360710);
+}
+
+.copper {
+  background: radial-gradient(circle at center, #f55d44, #471a13);
+}
+
+//Carousel Responsive
+
+.carousel .carousel-status,
+.carousel .thumbs,
+.carousel .control-dots,
+.carousel .control-next.control-arrow,
+.carousel .control-prev.control-arrow{
+  display: none;
+}

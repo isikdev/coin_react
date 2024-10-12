@@ -1,0 +1,201 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.bottomMenu {
+    @include flexCol(flex-start);
+    border-radius: 100px;
+    width: 100%;
+
+  .btnAAXA {
+    width: 96px;
+    height: 61px;
+    @include flexCol();
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__btn {
+    @include setFont(12px, 700, rgba(255, 255, 255, 0.7));
+    flex: 1;
+    text-transform: uppercase;
+    padding: 23px 15px;
+    &:focus, &:active {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    &:not(&_active):hover  {
+      color: $color-white;
+      cursor: pointer;
+    }
+    &:not(&_active):focus, &:not(&_active):active {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &_blueActive {
+      color: $color-white !important;
+      background-color: #00224d;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      cursor: default !important;
+    }
+
+    &_active {
+      color: $color-white;
+      &:focus, &:active  {
+        text-shadow: none !important;
+      }
+    }
+
+    @include xsmScreenMedia {
+      padding: 23px 10px;
+    }
+  }
+
+  &__btnAAXABlue {
+    width: 96px;
+    height: 61px;
+    @include setFont(12px, 700, rgba(255, 255, 255, 0.65));
+    background-color: #00224d;
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &:hover {
+      color: $color-white;
+      cursor: pointer;
+    }
+    &:focus, &:active {
+      color: rgba(255, 255, 255, 0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+  }
+
+  &__btnAAXAHome {
+    @extend .btnAAXA;
+    @include setFont(12px, 700);
+    border-radius: 100px;
+  }
+
+  &__btnAAXAlightMain {
+    @extend .btnAAXA;
+    @include setFont(12px, 700);
+    border-radius: 100px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus, &:active {
+      color: rgba(255, 255, 255, 0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    &_logoAnim {
+      widht: 20px;
+      height: 20px;
+    }
+  }
+
+  &__btnAAXAlight {
+    @extend .btnAAXA;
+    @include setFont(12px, 700);
+    background: linear-gradient(to right, #2574c7, #3688c5) !important;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus, &:active {
+      color: rgba(255, 255, 255, 0.5);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    &_logoAnim {
+      widht: 20px;
+      height: 20px;
+    }
+  }
+
+  &__btnLightBlueActive {
+    cursor: default !important;
+    color: $color-white !important;
+    background: linear-gradient(90deg, #4093ba 0%, #5196ac 100%);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    &:focus, &:active  {
+      text-shadow: none;
+    }
+  }
+
+  &__btnLightBlue {
+     background: linear-gradient(to right, #3688c5, #4094ba);
+  }
+}
+
+.menuLightDesk {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btnAAXALightBlue {
+  background: linear-gradient(90deg, #2495FE 0%, #5ACDB1 100%);
+}
+
+.btnAAXADarkBlue {
+  background: #121b2e;
+}
+
+.menuElectroDesk, .btnAAXAElectro {
+  background: linear-gradient(to right, #1818ea, #141499, #04042b);
+}
+
+.menuSilverDesk, .btnAAXASilver {
+  background: linear-gradient(to right, #43575d, #83a2b8, #182121);
+}
+
+.menuGoldenDesk, .btnAAXAGolden {
+  background: linear-gradient(to right, #545720, #aaa31a, #5b5e1f);
+}
+
+.menuPlatinumDesk, .btnAAXAPlatinum {
+  background: linear-gradient(to right, #43575d, #305367, #203842);
+}
+
+.menuDiamondDesk, .btnAAXADiamond {
+  background: linear-gradient(to right, #243657, #3a63ad, #1a3549);
+}
+
+.menuQuantumDesk, .btnAAXAQuantum {
+  background: linear-gradient(to right, #eecc40, #c2a115, #443703);
+}
+
+.menuArtDesk, .btnAAXAArt {
+  background: linear-gradient(to right, #e898ba, #e38cb1, #a33d4c);
+}
+
+.menuArbitrationDesk, .btnAAXAArbitration {
+  background: linear-gradient(to right, #ecaeb6, #bc616d, #410d14);
+}
+
+.menuMainersDesk, .btnAAXAMainers {
+  background: linear-gradient(to right, #f6a1f5, #d61dd6, #800080);;
+}
+
+.menuSecurityDesk, .btnAAXASecurity {
+  background: linear-gradient(to right, #40e0d0, #45aca4, #206761);
+}
+
+.menuBankDesk, .btnAAXABank {
+  background: linear-gradient(to right, #cacac5, #9f9b9b, #343333);
+}
+
+.menuCityDesk, .btnAAXACity{
+  background: linear-gradient(to right, #885987, #6b6767, #171717);
+}
+
+.menuTeacherDesk, .btnAAXATeacher {
+  background: linear-gradient(to right, #f54063, #a82841, #360710);
+}
+
+.menuControlDesk, .btnAAXAControl {
+  background: linear-gradient(to right, #f55d44, #b54736, #471a13);
+}
+
+.menuActualDesk, .btnAAXAActual {
+  background: linear-gradient(to right, #907750, #967b4f, #605538);
+}

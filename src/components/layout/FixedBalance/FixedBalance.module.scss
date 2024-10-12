@@ -1,0 +1,145 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.fixedBalance {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  max-width: 768px;
+  min-height: 40px;
+  line-height: 40px;
+  text-align: center;
+
+  &__slideDesk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+
+    &_active {
+      opacity: 1;
+      transition: all 0.8s ease-out;
+    }
+  }
+
+  &__slideBox {
+    @include flexCol();
+  }
+
+  &__placeBox {
+    @include flexCol();
+    flex-direction: column;
+  }
+
+  &__balanceAnim {
+    width: 26px !important;
+    height: 26px !important;
+    margin: -1px 5px 0 0;
+  }
+
+  &__place {
+    font-size: 13px;
+    font-family: $font-fam-rubik;
+    margin: 0 10px;
+  }
+
+  &__status {
+    @include flexCol();
+    gap: 3px;
+    @include setFont(12px, 500);
+    font-family: $font-fam-rubik;
+    text-transform: uppercase;
+  }
+
+  &__leagueAnim {
+    width: 20px !important;
+    align-self: stretch;
+  }
+
+  &__leagueName {
+    margin: 2px 3px 0 5px;
+    text-transform: uppercase;
+  }
+
+  &__iconNext {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    stroke: $color-white;
+    &:hover  {
+      stroke: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+    }
+  }
+}
+
+.frensDesk {
+  background: radial-gradient(circle at center, #63CCB0, #101829);
+}
+
+.boostDesk {
+  background: radial-gradient(circle at center, #7DA2CC , #101829 );
+}
+
+.electricBlueDesk {
+  background: radial-gradient(circle at center, #1818ea, #04042b);
+}
+
+.silverDesk {
+  background: radial-gradient(circle at center, #5f7d96, #182121);
+}
+
+.goldenDesk {
+  background: radial-gradient(circle at center, #af9c0b, #242712);
+}
+
+.platinumDesk {
+  background: radial-gradient(circle at center, #4d7ea0, #1d2828);
+}
+
+.diamondDesk {
+  background: radial-gradient(circle at center, #4365ba, #181d26);
+}
+
+.quantumDesk {
+  background: radial-gradient(circle at center, #f8ca0a, #000);
+}
+
+.artDesk {
+  background: radial-gradient(circle at center, #f3b7d0, #a33d4c);
+}
+
+.arbitrationDesk {
+  background: radial-gradient(circle at center, #ecaeb6, #410d14);
+}
+
+.mainersDesk {
+  background: radial-gradient(circle at center, #f6a1f5, #800080);
+}
+
+.securityDesk {
+  background: radial-gradient(circle at center, #40e0d0, #206761);
+}
+
+.bankDesk {
+  background: radial-gradient(circle at center, #cacac5, #343333)
+}
+
+.cityDesk {
+  background: radial-gradient(circle at center, #885987, #171717);
+}
+
+.teacherDesk {
+  background: radial-gradient(circle at center, #f54063, #360710);
+}
+
+.controlDesk {
+  background: radial-gradient(circle at center, #f55d44, #471a13);
+}
+
+.actualDesk {
+  background: radial-gradient(circle at center, #906c43, #23251c);
+}
